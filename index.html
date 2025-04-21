@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Nikhila Typewriter</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background: black;
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: 68px;
+        font-weight: 300;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        overflow: hidden;
+      }
+
+      .container {
+        text-align: center;
+        padding: 20px;
+      }
+
+      .line {
+        overflow: hidden;
+        white-space: nowrap;
+        width: 0;
+        margin: 10px auto;
+        background: linear-gradient(
+          90deg,
+          #8e6f94,
+          #56ada3
+        ); /* Slightly darker gradient */
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-shadow: 0 0 4px rgba(155, 155, 155, 0.2);
+      }
+
+      .line1 {
+        animation: typing 3s steps(30, end) 3s forwards;
+      }
+
+      .line2 {
+        margin-top: 30px;
+        animation: typing2 3s steps(30, end) 7.5s forwards;
+      }
+
+      @keyframes typing {
+        0% {
+          width: 0;
+          border-right: 0em solid transparent;
+        }
+        1% {
+          border-right: 0.12em solid rgba(255, 255, 255, 0.3);
+        }
+        99% {
+          border-right: 0.12em solid rgba(255, 255, 255, 0.3);
+        }
+        100% {
+          width: 100%;
+          border-right: 0em solid transparent;
+        }
+      }
+
+      @keyframes typing2 {
+        0% {
+          width: 0;
+          border-right: 0em solid transparent;
+        }
+        1% {
+          border-right: 0.12em solid rgba(255, 255, 255, 0.3);
+        }
+        99% {
+          border-right: 0.12em solid rgba(255, 255, 255, 0.3);
+        }
+        100% {
+          width: 100%;
+          border-right: 0em solid transparent;
+        }
+      }
+
+      video {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        min-width: 100%;
+        min-height: 100%;
+        object-fit: cover;
+        z-index: -1;
+        background-color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <video autoplay muted loop playsinline>
+      <source src="stars.mp4" type="video/mp4" />
+      <source src="stars.webm" type="video/webm" />
+      <source src="stars.ogv" type="video/ogg" />
+      Your browser does not support the video tag.
+    </video>
+
+    <div class="container">
+      <div class="line line1">Hi, I'm Nikhila Pediredla</div>
+      <div class="line line2">Welcome to my GitHub!</div>
+    </div>
+  </body>
+</html>
